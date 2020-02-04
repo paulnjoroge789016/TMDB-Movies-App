@@ -1,20 +1,15 @@
 package com.portofolio.moviesapp.Adapters
 
 import android.content.Context
-import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
-import android.widget.RatingBar
 import android.widget.TextView
-import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import coil.api.load
 import com.portofolio.moviesapp.Models.Cast
-import com.portofolio.moviesapp.Models.Movie
 import com.portofolio.mymovieapp.R
-
 import okhttp3.HttpUrl
 
 /**
@@ -22,11 +17,11 @@ import okhttp3.HttpUrl
  */
 class CastRecyclerViewAdapter()  : RecyclerView.Adapter<CastRecyclerViewAdapter.ViewHolder>() {
 
-    var castList: ArrayList<Cast>? = ArrayList()
+    var castList: List<Cast>? = ArrayList()
     lateinit var context: Context
     lateinit var inflater: LayoutInflater
 
-    constructor(movieList: ArrayList<Cast>?, context: Context) : this() {
+    constructor(movieList: List<Cast>, context: Context) : this() {
         this.castList = movieList
         this.context = context
     }
@@ -45,7 +40,8 @@ class CastRecyclerViewAdapter()  : RecyclerView.Adapter<CastRecyclerViewAdapter.
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val cast = castList!![position]
         holder.castName.text = cast.name
-        holder.castImageView.load(R.drawable.cast_image_view)
+        val backdropURL = HttpUrl.get("https://image.tmdb.org/t/p/w500${cast.profile_path}")
+        holder.castImageView.load(backdropURL)
 
 
     }

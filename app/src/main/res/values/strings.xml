@@ -1,9 +1,9 @@
 <resources>
-<string name="app_name">MyMoviesApp</string>
+    <string name="app_name">MyMoviesApp</string>
 
-<!-- TODO: Remove or change this placeholder text -->
-<string name="hello_blank_fragment">Hello blank fragment</string>
-<string name="mv_description">Eventually, you do plan to have dinosours on your dinosaur tour, right? Do you have any idea how long it takes those cups to.</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="mv_description">Eventually, you do plan to have dinosours on your dinosaur tour, right? Do you have any idea how long it takes those cups to.</string>
     <string name="movie_detail_content_description">Movie detail header</string>
     <string name="likes_percentage">94%</string>
     <string name="apiKey">2e417461a5c52546847623467482f881</string>

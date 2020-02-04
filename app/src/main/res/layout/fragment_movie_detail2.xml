@@ -6,20 +6,53 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".MovieDetailFragment">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#000">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:background="#000">
 
-        <ImageView
-            android:id="@+id/movieDetailImageView"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:background="@drawable/image_bg"
-            android:scaleType="centerCrop"
-            android:contentDescription="@string/movie_detail_content_description" />
+            android:layout_height="match_parent">
 
+            <ImageView
+                android:id="@+id/movieDetailImageView"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/image_bg"
+                android:contentDescription="@string/movie_detail_content_description"
+                android:scaleType="centerCrop"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:background="@drawable/play_btn_bg"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                >
+                <ImageView
+                    android:id="@+id/play_trailer_btn"
+                    android:layout_margin="5dp"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/play_btn"
+                    />
+            </LinearLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -188,4 +221,5 @@
 
         </LinearLayout>
     </LinearLayout>
+    </ScrollView>
 </FrameLayout>

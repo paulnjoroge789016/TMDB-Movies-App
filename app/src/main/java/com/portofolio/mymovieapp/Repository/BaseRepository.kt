@@ -15,8 +15,9 @@ open class BaseRepository {
         when(result){
             is Result.Success ->
                 output = result.data
-            is Result.Error ->
+            is Result.Error -> {
                 Log.e("Error", result.exception.toString())
+            }
         }
         return output
     }

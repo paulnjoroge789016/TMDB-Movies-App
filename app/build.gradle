@@ -22,12 +22,12 @@ android {
         }
 
     }
-    compileOptions{
+    compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
 
-    kotlinOptions{
+    kotlinOptions {
         jvmTarget = JavaVersion.VERSION_1_8.toString()
     }
 
@@ -67,5 +67,6 @@ dependencies {
     //http requests logging
     implementation 'com.squareup.okhttp3:logging-interceptor:3.8.1'
 
+    implementation files('libs/YouTubeAndroidPlayerApi.jar')
 
 }

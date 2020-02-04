@@ -13,10 +13,31 @@
         <action
             android:id="@+id/action_movieListFragment_to_movieDetailFragment"
             app:destination="@id/movieDetailFragment" />
+        <action
+            android:id="@+id/action_movieListFragment_to_trendingMoviesFragment"
+            app:destination="@id/trendingMoviesFragment" />
     </fragment>
     <fragment
         android:id="@+id/movieDetailFragment"
         android:name="com.portofolio.mymovieapp.MovieDetailFragment"
         android:label="fragment_movie_detail2"
-        tools:layout="@layout/fragment_movie_detail2" />
+        tools:layout="@layout/fragment_movie_detail2" >
+        <action
+            android:id="@+id/action_movieDetailFragment_to_trailerPlayer"
+            app:destination="@id/trailerPlayer" />
+    </fragment>
+    <fragment
+        android:id="@+id/trendingMoviesFragment"
+        android:name="com.portofolio.mymovieapp.TrendingMoviesFragment"
+        android:label="fragment_trending_movies"
+        tools:layout="@layout/fragment_trending_movies" >
+        <action
+            android:id="@+id/action_trendingMoviesFragment_to_movieDetailFragment"
+            app:destination="@id/movieDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/trailerPlayer"
+        android:name="com.portofolio.mymovieapp.TrailerPlayer"
+        android:label="fragment_trailer_player"
+        tools:layout="@layout/fragment_trailer_player" />
 </navigation>
