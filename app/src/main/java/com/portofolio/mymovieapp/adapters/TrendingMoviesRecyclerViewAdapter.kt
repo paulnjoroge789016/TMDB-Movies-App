@@ -1,4 +1,4 @@
-package com.portofolio.mymovieapp.Adapters
+package com.portofolio.mymovieapp.adapters
 
 import android.content.Context
 import android.os.Bundle

@@ -4,6 +4,8 @@ apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
 
+apply plugin: 'kotlin-kapt'
+
 android {
     compileSdkVersion 29
     buildToolsVersion "29.0.2"
@@ -37,6 +39,8 @@ android {
 }
 
 dependencies {
+
+    def roomVersion = '2.2.3'
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation 'androidx.appcompat:appcompat:1.1.0'
@@ -67,6 +71,16 @@ dependencies {
     //http requests logging
     implementation 'com.squareup.okhttp3:logging-interceptor:3.8.1'
 
+    //youtube api
     implementation files('libs/YouTubeAndroidPlayerApi.jar')
+
+    //Pagination
+    implementation 'android.arch.paging:runtime:2.1.0'
+
+    //room dependencies
+    implementation "androidx.room:room-runtime:$roomVersion"
+    implementation "androidx.room:room-ktx:$roomVersion"
+    kapt "androidx.room:room-compiler:$roomVersion"
+    androidTestImplementation "androidx.room:room-testing:$roomVersion"
 
 }

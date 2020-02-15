@@ -10,7 +10,6 @@ import java.io.IOException
 open class BaseRepository {
     suspend fun <T: Any> safeApiCall(call: suspend()-> Response<T>, error: String) :T?{
         val result = moviesApiOutput(call, error)
-
         var output: T? = null
         when(result){
             is Result.Success ->

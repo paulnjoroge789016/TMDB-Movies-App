@@ -6,14 +6,12 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.GridLayout
 import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.portofolio.moviesapp.ViewModels.TmdbViewModel
-import com.portofolio.mymovieapp.Adapters.TrendingMoviesRecyclerViewAdapter
+import com.portofolio.mymovieapp.adapters.TrendingMoviesRecyclerViewAdapter
 
 /**
  * A simple [Fragment] subclass.

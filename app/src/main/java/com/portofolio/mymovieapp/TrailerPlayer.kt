@@ -5,10 +5,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.google.android.youtube.player.YouTubeBaseActivity
 
 import com.google.android.youtube.player.YouTubePlayerView
-import com.portofolio.mymovieapp.Models.MovieTrailer
+import com.portofolio.mymovieapp.models.MovieTrailer
 import com.portofolio.mymovieapp.Utils.YoutubeVideoListener
 
 class TrailerPlayer :Fragment() {

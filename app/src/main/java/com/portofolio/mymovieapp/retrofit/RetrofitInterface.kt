@@ -3,7 +3,7 @@ package com.portofolio.moviesapp.Retrofit
 import com.portofolio.moviesapp.Models.MoviesList
 import com.portofolio.moviesapp.Models.credits
 
-import com.portofolio.mymovieapp.Models.MovieTrailers
+import com.portofolio.mymovieapp.models.MovieTrailers
 import kotlinx.coroutines.Deferred
 import retrofit2.Response
 import retrofit2.http.*

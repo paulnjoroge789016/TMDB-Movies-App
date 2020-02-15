@@ -1,4 +1,4 @@
-package com.portofolio.mymovieapp.Models
+package com.portofolio.mymovieapp.models
 
 import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize
