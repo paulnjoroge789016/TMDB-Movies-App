@@ -1,14 +1,19 @@
 package com.portofolio.mymovieapp.Data.Room
 
+import android.os.Parcel
+import android.os.Parcelable
 import androidx.annotation.Nullable
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import kotlinx.android.parcel.Parcelize
 
 /**
  * Created by paul on 2/15/2020 at 12:03 PM.
  */
+
 @Entity(tableName = "movies_table")
+@Parcelize
 data class Movie(@PrimaryKey(autoGenerate = false) val id: Int = 0,
                  @ColumnInfo(name = "poster_path" ) val posterPath: String,
                  @ColumnInfo(name = "overview" ) val overview: String,
@@ -21,4 +26,4 @@ data class Movie(@PrimaryKey(autoGenerate = false) val id: Int = 0,
                  @ColumnInfo(name = "backdrop_path" ) val backdropPath: String?,
                  @ColumnInfo(name = "popularity" ) val popularity: Double,
                  @ColumnInfo(name = "vote_average" ) val voteAverage: Double
-                 )
+                 ) : Parcelable

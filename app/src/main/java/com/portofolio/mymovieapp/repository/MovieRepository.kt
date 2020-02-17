@@ -35,6 +35,7 @@ class MovieRepository(private val api: RetrofitInterface,private val  castDao: C
     }
 
     suspend fun getCast(id: Int): ArrayList<Cast>{
+
         val castResponse = safeApiCall(
             call = {api.getCast(id).await()},
             error = "Failed to get cast"
