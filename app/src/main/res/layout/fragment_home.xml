@@ -10,35 +10,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <com.google.android.material.tabs.TabLayout
-            android:id="@+id/tabLayout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:tabBackground="@drawable/movie_list_bg"
-            app:tabTextColor="#D6F1F7">
-
-            <com.google.android.material.tabs.TabItem
-                android:id="@+id/movieListFragment"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="New Releases" />
-
-            <com.google.android.material.tabs.TabItem
-                android:id="@+id/trendingMoviesFragment"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Trending" />
-
-            <com.google.android.material.tabs.TabItem
-                android:id="@+id/new_popular_tab"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="popular" />
-        </com.google.android.material.tabs.TabLayout>
-
         <fragment
 
             android:id="@+id/nav_container"
@@ -49,7 +20,6 @@
             app:layout_constraintBottom_toTopOf="@+id/bottomNavView"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tabLayout"
             app:navGraph="@navigation/nag_graph" />
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
