@@ -42,10 +42,11 @@ class MovieRepository(private val api: RetrofitInterface,private val  castDao: C
         )
 
         val castsList = arrayListOf<com.portofolio.mymovieapp.Data.Room.Cast>()
-        castResponse!!.cast.forEach {
-            castsList.add(EntityMappers.fromCastEntityToDb(it))
+        if(castsList.isNotEmpty()) {
+            castResponse!!.cast.forEach { it ->
+                castsList.add(EntityMappers.fromCastEntityToDb(it))
+            }
         }
-
         castDao.insertAllCasts(castsList.toList())
         return castResponse!!.cast
     }
@@ -65,9 +66,12 @@ class MovieRepository(private val api: RetrofitInterface,private val  castDao: C
         )
 
         val trailers = arrayListOf<com.portofolio.mymovieapp.Data.Room.MovieTrailer>()
-        movieTrailers!!.results.forEach {
-            trailers.add(EntityMappers.fromTrailerEntityToDb(it))
+        if(trailers.isNotEmpty()){
+            movieTrailers!!.results.forEach {
+                trailers.add(EntityMappers.fromTrailerEntityToDb(it))
+            }
         }
+
 
         movieTrailerDao.insertAllTrailers(trailers.toList())
 
